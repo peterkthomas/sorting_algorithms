@@ -7,9 +7,9 @@
  * @left: left index
  * @right: right index
  */
-int array_split(int *array, size_t size, unsigned int left, unsigned int right)
+int array_split(int *array, size_t size, int left, int right)
 {
-	unsigned int i, j, pivot, temp;
+	int i, j, pivot, temp;
 
 	pivot = array[right];
 	i = left;
@@ -45,9 +45,9 @@ int array_split(int *array, size_t size, unsigned int left, unsigned int right)
  * @left: index of the left side of pivot
  * @right: index of the right side of pivot
  */
-void array_sort(int *array, size_t size, unsigned int left, unsigned int right)
+void array_sort(int *array, size_t size, int left, int right)
 {
-	unsigned int pivot;
+	int pivot;
 
 	if (left < right)
 	{
@@ -63,7 +63,7 @@ void array_sort(int *array, size_t size, unsigned int left, unsigned int right)
  */
 void quick_sort (int *array, size_t size)
 {
-	unsigned int left = 0, right = size - 1;
+	int left = 0, right = size - 1;
 
 	if (!array || size < 2)
 		return;
