@@ -46,7 +46,7 @@ void insertion_sort_list(listint_t **list)
 			temp = forward->prev;
 			swap(list, temp, forward);
 			print_list(*list);
-			forward = forward->prev;
+			forward = forward->next;
 		}
 
 	}
