@@ -28,12 +28,12 @@ int array_split(int *array, size_t size, unsigned int left, unsigned int right)
 			i++;
 		}
 	}
-	if (array[i] != arr[right])
+	if (array[i] != array[right])
 	{
-		temp = arr[i];
-		arr[i] = arr[right];
-		arr[right] = temp;
-		print_array(arr, size);
+		temp = array[i];
+		array[i] = array[right];
+		array[right] = temp;
+		print_array(array, size);
 	}
 
 	return (i);
