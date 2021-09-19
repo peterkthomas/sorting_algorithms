@@ -6,6 +6,8 @@
  * @size: size of array
  * @left: left index
  * @right: right index
+ *
+ * Return: Index of pivot
  */
 int array_split(int *array, size_t size, int left, int right)
 {
@@ -21,7 +23,7 @@ int array_split(int *array, size_t size, int left, int right)
 			if (i != j)
 			{
 				temp = array[j];
-				array[j] = 	array[i];
+				array[j] = array[i];
 				array[i] = temp;
 				print_array(array, size);
 			}
@@ -40,8 +42,8 @@ int array_split(int *array, size_t size, int left, int right)
 }
 /**
  * array_sort - sorts data recursively
- * array: array of data
- * size: size of the array
+ * @array: array of data
+ * @size: size of the array
  * @left: index of the left side of pivot
  * @right: index of the right side of pivot
  */
@@ -61,13 +63,13 @@ void array_sort(int *array, size_t size, int left, int right)
  * @array: array of data
  * @size: array's size
  */
-void quick_sort (int *array, size_t size)
+void quick_sort(int *array, size_t size)
 {
 	int left = 0, right = size - 1;
 
 	if (!array || size < 2)
 		return;
 
-	array_sort (array, size, left, right);
+	array_sort(array, size, left, right);
 
 }
