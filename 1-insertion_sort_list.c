@@ -27,10 +27,10 @@ void swap(listint_t **head, listint_t *node_a, listint_t *node_b)
 }
 
 /**
- * insert_sort_list - uses the insert sort algorithm
+ * insertion_sort_list - uses the insert sort algorithm
  * @list: list to be sorted
  */
-void insert_sort_list(listint_t **list)
+void insertion_sort_list(listint_t **list)
 {
 	listint_t *temp, *forward;
 
